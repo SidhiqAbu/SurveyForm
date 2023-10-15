@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Survey Form</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            body{
+                background-color: blue;
+                color: white;
+            }
+            .outerCantainer{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            #serveyForm{
+                background-color:white;
+                color: black;
+                width: 60%;
+                padding: 2%;
+                
+            }
+            #nameContainer{
+                display: flex;
+                justify-content: space-between;
+                width: 50%;
+            }
+            #btnContainer{
+                display: flex;
+                justify-content: space-between;
+                width: 30%;
+                padding: 2%;
+            }
+            .inputUser{
+                padding: 5%;
+                width: 150%;
+                margin-top: 4%;
+                margin-bottom: 4%;
+            }
+            .btns{
+                padding: 2%;
+                background-color: blue;
+                color: white;
+                margin: 0px;
+                width: 40%;
+            }
+            #Country{
+                margin-bottom: 1%;
+                margin-top: 1%;
+            }
+            #textA{
+                margin-top: 2%;
+            }
+          #wrapper{
+            margin-bottom:1%;
+            margin-top: 1%;
+          }
+        </style>
+    </head>
+    <body>
+        <div class="outerCantainer">
+            <h1>Customer Survey Form</h1>
+            <form id="serveyForm" onsubmit="alert(`Do you want to Submit the form..!`)">
+                <div id="nameContainer">
+                    <div class="innerContainers">
+                        <label for="name">Name</label><br>
+                        <input type="text" id="name" class="inputUser" required>
+                    </div>
+                    <div class="innerContainers">
+                        <label for="email">Email</label><br>
+                        <input type="email" id="email" class="inputUser" required>
+                    </div>
+                </div>
+                <div id="nameContainer">
+                    <div class="innerContainers">
+                        <label for="mNumber">Mobile Number</label><br>
+                        <input type="text" id="mNumber" class="inputUser" required>
+                    </div>
+                    <div class="innerContainers">
+                        <label for="profession">Profession</label><br>
+                        <input type="text" id="profession" class="inputUser" required>
+                    </div>
+                </div>
+                <label for="Country">Country : </label>
+                <select required id="Country">
+                    <option value="">India</option>
+                    <option value="">Australia</option>
+                    <option value="">USA</option>
+                    <option value="">UK</option>
+                </select><br>
+                <div id="wrapper">
+                    <label for="Male_Female_Transgender_checkbox">Gender</label>
+                    <input type="checkbox" name="Male_Female_Transgender">Male</input>
+                    <input type="checkbox" name="Male_Female_Transgender">Female</input>
+                    <input type="checkbox" name="Male_Female_Transgender">Transgender</input>
+                  </div>
+                <div id="wrapper">
+                  <label for="yes_no_radio">Is this first time You are using our products & service?</label><br><br>
+                  <input type="radio" name="yes_no" checked>Yes</input>
+                  <input type="radio" name="yes_no">No</input>
+                </div>
+                <div id="wrapper">
+                    <label for="yes1_no1_radio">Would you suggestion to your friends and colleague?</label><br><br>
+                    <input type="radio" name="yes1_no1" checked>Yes</input>
+                    <input type="radio" name="yes1_no1">No</input>
+                </div>
+                <div id="wrapper">
+                    <label for="Satisfied_Unsatisfied_Undecided_radio">How satisfied are you with our company overall?</label><br><br>
+                    <input type="radio" name="Satisfied_Unsatisfied_Undecided" checked>Satisfied</input>
+                    <input type="radio" name="Satisfied_Unsatisfied_Undecided">Unsatisfied</input>
+                    <input type="radio" name="Satisfied_Unsatisfied_Undecided">Undecided</input>
+                </div>
+                <label for="textA">Do you have suggestion to improve our service?</label>
+                <textarea id="textA" cols="120" rows="10"></textarea>
+                <div id="btnContainer">
+                    <input type="submit" value="Submit" class="btns">
+                    <input type="reset" value="Reset" class="btns">    
+                </div>
+            </form>
+        </div>
+
+    </body>
+</html>
